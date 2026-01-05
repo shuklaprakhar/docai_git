@@ -1,10 +1,21 @@
 from fastapi import FastAPI, UploadFile, File, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 from typing import List
 import os
 from .mcp_orchestrator import Orchestrator
 from . import db
 
 app = FastAPI(title="Referral Multi-Agent API")
+
+# CORS - allow local frontend dev server to call the API
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:5173", "http://127.0.0.1:5173"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 orchestrator = Orchestrator(prefer_llm=bool(os.getenv("ANTHROPIC_API_KEY")))
 
 
