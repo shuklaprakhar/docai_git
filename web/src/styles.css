@@ -1,0 +1,9 @@
+body { font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; margin: 0; padding: 1rem; background: #f7f7fb; }
+.app { max-width: 900px; margin: 0 auto; }
+header h1 { margin: 0 0 1rem 0; font-size: 1.25rem; }
+.upload-form { background: #fff; padding: 1rem; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+.upload-form form { display: flex; gap: 1rem; align-items: center; }
+.upload-form input[type=file] { margin-left: .5rem; }
+.results { margin-top: 1rem; }
+.result { background: #f9fafb; padding: .75rem; border-radius: 6px; margin-bottom: .75rem; }
+pre { background: #11182705; padding: .5rem; border-radius: 4px; overflow:auto; }
